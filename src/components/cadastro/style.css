@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
 
 .container-max {
     width: 100%;
@@ -48,8 +48,14 @@ input {
     margin: 0;
     border: 0;
     margin-top: 30px;
-    margin-left: 35%;
-    width: 100px;
+    margin-left: 30%;
+    width: 150px;
+    background-color: #C882B4;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
 }
 .textLogin {
     color: #707070;
@@ -58,4 +64,11 @@ input {
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+.Link {
+    text-decoration: none;
+    color: inherit;
+    color: #BA66A3;
+    font-weight: 500;
+    
 }

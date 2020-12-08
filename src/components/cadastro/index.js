@@ -21,11 +21,11 @@ const Cadastro = () => {
                     <input type='password'></input>
                     <p>Confirme sua Senha</p>
                     <input type='password'></input>
-                    <input type='submit' className='button-submit' value='Cadastrar'></input>
+                    <input type='submit' className='button-submit' value='CADASTRAR'></input>
                 </form>
                 <div className='login'>
                     <p className='textLogin'>Já Possui conta? </p>
-                    <a className='Link'> Faça Login</a>
+                    <a href='/' className='Link'> Faça Login</a>
                     {/* <Link to='/'> Faça Login</Link> */}
                 </div>
             </div>
