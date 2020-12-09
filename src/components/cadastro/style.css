@@ -10,7 +10,6 @@
     width: 50%;
 }
 .half img {
-    width: 980px;
     height: 100%;
     overflow: hidden;
 }
@@ -20,35 +19,44 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /* align-content: center */
 }
-.half.screen img {
-    width: 200px;
-    height: 200px;
-}
-form {
+.centralizer {
+    width: 50%;
+    height: 85%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+.centralizer img {
+    width: 200px;
+    height: auto;
+}
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 }
 p {
     font-family: 'Montserrat', sans-serif;
     color: #C882B4;
+    width: 90%;
 }
 
 input {
     height: 45px;
+    width: 90%;
     border-color: #C882B4;
     border-width: 2px;
     outline: 0;
+    display: flex;
+    justify-content: center;
 }
 .button-submit {
-    padding: 0;
-    margin: 0;
-    border: 0;
     margin-top: 30px;
-    margin-left: 30%;
     width: 150px;
     background-color: #C882B4;
     border-radius: 5px;
@@ -59,6 +67,8 @@ input {
 }
 .textLogin {
     color: #707070;
+    width: auto;
+    margin-right: 5px;
 }
 .login {
     display: flex;
@@ -72,3 +82,23 @@ input {
     font-weight: 500;
     
 }
+
+@media( max-width: 1024px ) {
+
+    .half {
+        display: none;
+    }
+    .half.screen {
+        height: 100%;
+        width: 100%;
+        /* background-image: url(../../assets/Cadastro.jpg); */
+        /* mix-blend-mode: screen; */
+    }
+}
+/* @media ( max-width: 500px ) {
+
+    .centralizer img {
+        width: 150px;
+        height: auto;
+    }
+} */
