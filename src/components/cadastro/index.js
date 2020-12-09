@@ -17,7 +17,7 @@ const Cadastro = () => {
                         <p>Nome</p>
                         <input></input>
                         <p>Email</p>
-                        <input></input>
+                        <input type='email'></input>
                         <p>Senha</p>
                         <input type='password'></input>
                         <p>Confirme sua Senha</p>
