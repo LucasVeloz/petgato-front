@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import { Link } from 'react-dom';
+import { Link } from 'react-router-dom';
 
 import imagem from '../../assets/Cadastro.jpg';
 import logo from '../../assets/gatinho_petgato.svg';
@@ -22,21 +22,21 @@ const Cadastro = () => {
     return (
         <div className='container-max'>
             <div className='half'>
-                <img src={imagem}></img>
+                <img src={imagem} alt="gatinho"></img>
             </div>
             <div className='half screen'>
                 <div className='centralizer'>
-                    <img src={logo}></img>
+                    <img src={logo} alt="PetGato"></img>
                     <form>
                         <p>Nome</p>
-                        <input onChange={(e) => setName(e)}></input>
+                        <input onChange={(e) => setName(e.target.value)}></input>
                         <p>Email</p>
-                        <input type='email' onClick={(e) => setEmail(e)}></input>
+                        <input type='email' onChange={(e) => setEmail(e.target.value)}></input>
                         <p>Senha</p>
                         <input type='password'></input>
                         <p>Confirme sua Senha</p>
                         <input type='password'></input>
-                        <input type="submit" className='button-submit' value='CADASTRAR' onClick={handleSubmit}></input>
+                        <button type="button" className='button-submit' value='CADASTRAR' onClick={handleSubmit}></button>
                     </form>
                     <div className='login'>
                         <p className='textLogin'>Já possui conta? </p>

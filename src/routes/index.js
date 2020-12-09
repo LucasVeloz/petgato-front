@@ -6,6 +6,7 @@ import Cadastro from '../pages/cadastro';
 export default function Routes() {
   return (
     <Switch>
+      <Route path="/" component={Cadastro} />
       <Route path="/register" component={Cadastro} />
     </Switch>
   );
