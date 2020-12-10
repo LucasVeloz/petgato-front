@@ -23,11 +23,11 @@ const Cadastro = (handleSubmit, setName, setEmail) => {
                         <input type='password'></input>
                         <p>Confirme sua Senha</p>
                         <input type='password'></input>
-                        <button type="button" className='button-submit' value='CADASTRAR' onClick={handleSubmit}>CADASTRAR</button>
+                        <button type="button" className='button-submit' onClick={handleSubmit}>CADASTRAR</button>
                     </form>
                     <div className='login'>
                         <p className='textLogin'>Já possui conta? </p>
-                        <Link to='/login' className='Link'>Faça Login</Link>
+                        <Link to='/' className='Link'>Faça Login</Link>
                     </div>
                 </div>
             </div>
