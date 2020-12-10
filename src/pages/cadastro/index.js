@@ -40,7 +40,7 @@ const Cadastro = () => {
                     </form>
                     <div className='login'>
                         <p className='textLogin'>Já possui conta? </p>
-                        {/* <Link to='/' className='Link'>Faça Login</Link> */}
+                        {/* <Link to='/login' className='Link'>Faça Login</Link> */}
                     </div>
                 </div>
             </div>
