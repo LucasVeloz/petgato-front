@@ -36,15 +36,11 @@ const Cadastro = () => {
                         <input type='password'></input>
                         <p>Confirme sua Senha</p>
                         <input type='password'></input>
-                        <button type="button" id='button-submit' value='CADASTRAR' onClick={handleSubmit}></button>
+                        <button type="button" className='button-submit' value='CADASTRAR' onClick={handleSubmit}>CADASTRAR</button>
                     </form>
                     <div className='login'>
                         <p className='textLogin'>Já possui conta? </p>
-<<<<<<< HEAD
-                        {/* <Link to='/login' className='Link'>Faça Login</Link> */}
-=======
-                        <Link to='/' className='Link'>Faça Login</Link>
->>>>>>> 8dd9d73c63e113563ba60d7b3fcf39460bdfb50a
+                        <Link to='/login' className='Link'>Faça Login</Link>
                     </div>
                 </div>
             </div>
