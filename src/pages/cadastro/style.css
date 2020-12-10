@@ -55,8 +55,9 @@ input {
     display: flex;
     justify-content: center;
 }
-.button-submit {
+#button-submit {
     margin-top: 30px;
+    height: 30px;
     width: 150px;
     background-color: #C882B4;
     border-radius: 5px;
