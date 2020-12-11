@@ -26,11 +26,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* align-content: center */
 }
 .centralizer {
     width: 50%;
-    height: 85%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -95,13 +94,26 @@ input {
     
 }
 
-@media( max-width: 1100px ) {
+@media( max-width: 1024px ) {
 
-    .half {
-        display: none;
-    }
     .half.screen {
         height: 100%;
         width: 100%;
     }
+}
+@media( max-width: 374px ) {
+    
+    .centralizer img {
+        width: 0;
+        height: 0;
+
+    }
+}
+
+@media ( max-height: 758px ) {
+    .centralizer img {
+        width: 0;
+        height: 0;
+    }
+    
 }

@@ -7,7 +7,6 @@ const Cadastro = (handleSubmit, setName, setEmail) => {
 
     return (
         <div className='container-max'>
-            {/* <img src={imagem} alt="gatinho"></img> */}
             <div className='half screen'>
                 <div className='centralizer'>
                     <img src={logo} alt="PetGato"></img>
