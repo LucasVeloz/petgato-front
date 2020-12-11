@@ -1,4 +1,3 @@
-import LoginImage from '../../assets/Login.jpg';
 import './style.css';
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/gatinho_petgato.svg'
@@ -6,10 +5,7 @@ import Logo from '../../assets/gatinho_petgato.svg'
 const Login = (setEmail, handleSubmit) => {
 
     return (
-        <div className='container-max'>
-            <div className='half'>
-                <img src={LoginImage} alt="gatinho"></img>
-            </div>
+        <div className='container-max login'>
             <div className='half screen'>
                 <div className='centralizer'>
                     <img src={Logo} alt="PetGato"></img>

@@ -5,16 +5,23 @@
     width: 100%;
     height: 100%;
     display: flex;
+    background-image: url(../../assets/Cadastro.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+}
+.container-max img {
+    width: 100%;
+    height: 100%;
 }
 .half {
-    width: 50%;
-}
-.half img {
-    height: 100%;
-    overflow: hidden;
 }
 .half.screen {
-    background-color: #FBE9F6;
+    border-radius: 2%;
+    height: 85%;
+    width: 50%;
+    background-color: rgba( 251, 233, 346, 0.85);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,6 +61,7 @@ input {
     outline: 0;
     display: flex;
     justify-content: center;
+    border-radius: 10px;
 }
 .button-submit {
     margin: 0;
@@ -95,14 +103,5 @@ input {
     .half.screen {
         height: 100%;
         width: 100%;
-        /* background-image: url(../../assets/Cadastro.jpg); */
-        /* mix-blend-mode: screen; */
     }
 }
-/* @media ( max-width: 500px ) {
-
-    .centralizer img {
-        width: 150px;
-        height: auto;
-    }
-} */

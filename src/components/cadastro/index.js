@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import imagem from '../../assets/Cadastro.jpg';
 import logo from '../../assets/gatinho_petgato.svg';
 import './style.css';
 
@@ -8,9 +7,7 @@ const Cadastro = (handleSubmit, setName, setEmail) => {
 
     return (
         <div className='container-max'>
-            <div className='half'>
-                <img src={imagem} alt="gatinho"></img>
-            </div>
+            {/* <img src={imagem} alt="gatinho"></img> */}
             <div className='half screen'>
                 <div className='centralizer'>
                     <img src={logo} alt="PetGato"></img>
@@ -27,7 +24,7 @@ const Cadastro = (handleSubmit, setName, setEmail) => {
                     </form>
                     <div className='login'>
                         <p className='textLogin'>Já possui conta? </p>
-                        <Link to='/' className='Link'>Faça Login</Link>
+                        <Link to='/login' className='Link'>Faça Login</Link>
                     </div>
                 </div>
             </div>

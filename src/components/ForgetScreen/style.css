@@ -1,3 +1,6 @@
+.container-max.forgetScreen {
+    background-image: url(../../assets/forgetimage.jpg);
+}
 .button-submit.forget {
     width: 200px;
 }
@@ -13,8 +16,4 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.half img {
-    height: 100%;
-    width: 1100px;
 }
