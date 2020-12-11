@@ -117,3 +117,9 @@ input {
     }
     
 }
+@media ( max-height: 590px) {
+    .half.screen {
+        height: 100%;
+        width: 100%;
+    }
+}
