@@ -3,7 +3,7 @@ import './style.css';
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/gatinho_petgato.svg'
 
-const Login = (setEmail, handleSubmit) => {
+const Login = ({setEmail, setPassword, handleSubmit}) => {
 
     return (
         <div className='container-max'>
@@ -17,7 +17,7 @@ const Login = (setEmail, handleSubmit) => {
                         <p>Email</p>
                         <input type='email' onChange={(e) => setEmail(e.target.value)}></input>
                         <p>Senha</p>
-                        <input type='password'></input>
+                        <input type='password' onChange={(e) => setPassword(e.target.value)}></input>
                         <button type="button" className='button-submit' onClick={handleSubmit}>ENTRAR</button>
                     </form>
                     <Link to='/forget' className='Link forget'>Esqueci minha senha</Link>

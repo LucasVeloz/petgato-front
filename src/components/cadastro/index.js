@@ -4,7 +4,7 @@ import logo from '../../assets/gatinho_petgato.svg';
 import './style.css';
 
 
-const Cadastro = (handleSubmit, setName, setEmail) => {
+const Cadastro = ({handleSubmit, setName, setEmail, setPassword, setPasswordConfirmation}) => {
 
     return (
         <div className='container-max'>
@@ -20,9 +20,9 @@ const Cadastro = (handleSubmit, setName, setEmail) => {
                         <p>Email</p>
                         <input type='email' onChange={(e) => setEmail(e.target.value)}></input>
                         <p>Senha</p>
-                        <input type='password'></input>
+                        <input type='password' onChange={(e) => setPassword(e.target.value)}></input>
                         <p>Confirme sua Senha</p>
-                        <input type='password'></input>
+                        <input type='password' onChange={(e) => setPasswordConfirmation(e.target.value)}></input>
                         <button type="button" className='button-submit' onClick={handleSubmit}>CADASTRAR</button>
                     </form>
                     <div className='login'>
