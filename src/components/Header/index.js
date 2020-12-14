@@ -1,4 +1,4 @@
-import './style.css'
+import './style.css';
 import Logo from '../../assets/gatinho_petgato_branco.svg';
 import { Link } from 'react-router-dom';
 
