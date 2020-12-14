@@ -1,16 +1,15 @@
-import CadastroPage from './pages/cadastro';
-import './App.css';
-import { Router } from 'react-dom';
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 
+import './App.css';
+
+import Routes from './routes';
 
 function App() {
   return (
-    <div className="App">
-      {/* <Router> */}
-        <CadastroPage/>
-      {/* </Router> */}
-      
-    </div>
+    <Router>
+      <Routes />
+    </Router>
   );
 }
 

@@ -1,33 +1,29 @@
-import './style.css';
-import imagem from '../../assets/Cadastro.jpg';
+import { Link } from 'react-router-dom';
 import logo from '../../assets/gatinho_petgato.svg';
-import { Link } from 'react-dom';
+import './style.css';
 
-const Cadastro = () => {
+
+const Cadastro = (handleSubmit, setName, setEmail) => {
 
     return (
         <div className='container-max'>
-            <div className='half'>
-                <img src={imagem}></img>
-            </div>
             <div className='half screen'>
                 <div className='centralizer'>
-                    <img src={logo}></img>
+                    <img src={logo} alt="PetGato"></img>
                     <form>
                         <p>Nome</p>
-                        <input></input>
+                        <input onChange={(e) => setName(e.target.value)}></input>
                         <p>Email</p>
-                        <input type='email'></input>
+                        <input type='email' onChange={(e) => setEmail(e.target.value)}></input>
                         <p>Senha</p>
                         <input type='password'></input>
                         <p>Confirme sua Senha</p>
                         <input type='password'></input>
-                        <input type='submit' className='button-submit' value='CADASTRAR'></input>
+                        <button type="button" className='button-submit' onClick={handleSubmit}>CADASTRAR</button>
                     </form>
                     <div className='login'>
                         <p className='textLogin'>Já possui conta? </p>
-                        <a href='/' className='Link'> Faça Login</a>
-                        {/* <Link to='/'> Faça Login</Link> */}
+                        <Link to='/login' className='Link'>Faça Login</Link>
                     </div>
                 </div>
             </div>
