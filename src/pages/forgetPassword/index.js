@@ -1,11 +1,58 @@
-import ForgetScreen from '../../components/ForgetScreen';
-
+import "./style.css";
+import { Link } from "react-router-dom";
+import Logo from "../../assets/gatinho_petgato.svg";
+import { useCallback, useState } from "react";
+import api from "../../services/api";
 const ForgetPassword = () => {
+    const [email, setEmail] = useState("");
+
+    const handleSubmit = useCallback(async () => {
+        await api.post("/password/forgot", {
+            email,
+        });
+    }, [email]);
 
     return (
-
-        <ForgetScreen/>
+        <div className="container-max forgetScreen">
+            <div className="half screen">
+                <div className="centralizer">
+                    <img src={Logo} alt="PetGato"></img>
+                    <form>
+                        <p>Email</p>
+                        <input
+                            type="email"
+                            autoComplete="email"
+                            onChange={(e) => setEmail(e.target.value)}
+                        ></input>
+                        <p className="forgetp">
+                            Insira seu email para recuperar a senha
+                        </p>
+                        <button
+                            type="button"
+                            autoFocus
+                            className="button-submit forget"
+                            onClick={handleSubmit}
+                        >
+                            RECUPERAR SENHA
+                        </button>
+                    </form>
+                    <div className="login forget">
+                        <p className="textLogin">Lembrou a senha? </p>
+                        <Link to="/login" className="Link">
+                            {" "}
+                            Faça Login
+                        </Link>
+                    </div>
+                    <div className="login forget">
+                        <p className="textLogin">Ainda não tem conta? </p>
+                        <Link to="/register" className="Link">
+                            Crie sua conta
+                        </Link>
+                    </div>
+                </div>
+            </div>
+        </div>
     );
-}
+};
 
 export default ForgetPassword;

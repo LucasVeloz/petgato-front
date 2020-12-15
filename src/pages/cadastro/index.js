@@ -1,10 +1,10 @@
 import { useState, useCallback } from 'react';
-
-import Cadastro from '../../components/cadastro';
-
 import api from '../../services/api';
+import { Link } from 'react-router-dom';
+import logo from '../../assets/gatinho_petgato.svg';
+import './style.css';
 
-const CadastroPage = () => {
+const Cadastro = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
 
@@ -16,8 +16,28 @@ const CadastroPage = () => {
     }, [name, email]);
 
     return (
-        <Cadastro handleSubmit={handleSubmit} setName={setName} setEmail={setEmail}/>
+        <div className='container-max'>
+            <div className='half screen'>
+                <div className='centralizer'>
+                    <img src={logo} alt="PetGato"></img>
+                    <form>
+                        <p>Nome</p>
+                        <input autoComplete='name' required onChange={(e) => setName(e.target.value)}></input>
+                        <p>Email</p>
+                        <input type='email' required autoComplete='email' onChange={(e) => setEmail(e.target.value)}></input>
+                        <p>Senha</p>
+                        <input type='password'></input>
+                        <p>Confirme sua Senha</p>
+                        <input type='password'></input>
+                        <button type="button" autoFocus className='button-submit' onClick={handleSubmit}>CADASTRAR</button>
+                    </form>
+                    <div className='login'>
+                        <p className='textLogin'>Já possui conta? </p>
+                        <Link to='/login' className='Link'>Faça Login</Link>
+                    </div>
+                </div>
+            </div>
+        </div>
     );
 }
-
-export default CadastroPage;
+export default Cadastro;
