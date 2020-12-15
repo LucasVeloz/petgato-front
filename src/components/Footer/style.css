@@ -1,0 +1,16 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+.Footer {
+  display: flex;
+  width: 100%;
+  bottom: 0%;
+  position:absolute;
+  text-align: center;
+  border:none;
+  text-align: center;
+  background-color: #C882B4; 
+  font-family: 'Montserrat', sans-serif;
+}
+.Footer p{
+    color:white;
+}
