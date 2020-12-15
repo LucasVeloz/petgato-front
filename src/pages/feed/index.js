@@ -4,7 +4,10 @@ import Footer from '../../components/Footer';
 const Feed = () => {
 
     return(
-        <Header/>,<Footer/>
+        <>
+        <Header/>
+        <Footer/>
+        </>
     );
 }
 
