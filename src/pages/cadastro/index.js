@@ -2,34 +2,50 @@ import { useState, useCallback } from 'react';
 import api from '../../services/api';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/gatinho_petgato.svg';
+import { useHistory } from 'react-router-dom';
 import './style.css';
 
 const Cadastro = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [passwordConfirmation, setPasswordConfirmation] = useState('');
 
-    const handleSubmit = useCallback(async () => {
-        await api.post('/users', {
-            name,
-            email,
-        });
-    }, [name, email]);
+    const history = useHistory();
+
+    const handleSubmit = useCallback(async (e) => {
+        e.preventDefault();
+        try {
+            await api.post('/users', {
+                name,
+                email,
+                password,
+                password_confirmation: passwordConfirmation,
+            });
+
+            alert("Usuário cadastrado com sucesso!");
+
+            history.replace('/');
+        } catch (e) {
+            alert("Houve um erro ao cadastrar, por favor tente novamente mais tarde.");
+        }
+    }, [name, email, password, passwordConfirmation, history]);
 
     return (
         <div className='container-max'>
             <div className='half screen'>
                 <div className='centralizer'>
                     <img src={logo} alt="PetGato"></img>
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <p>Nome</p>
-                        <input autoComplete='name' required onChange={(e) => setName(e.target.value)}></input>
+                        <input autoComplete="name" required onChange={(e) => setName(e.target.value)}></input>
                         <p>Email</p>
-                        <input type='email' required autoComplete='email' onChange={(e) => setEmail(e.target.value)}></input>
+                        <input autoComplete="email" required type='email' onChange={(e) => setEmail(e.target.value)}></input>
                         <p>Senha</p>
-                        <input type='password'></input>
+                        <input type='password' required onChange={(e) => setPassword(e.target.value)}></input>
                         <p>Confirme sua Senha</p>
-                        <input type='password'></input>
-                        <button type="button" autoFocus className='button-submit' onClick={handleSubmit}>CADASTRAR</button>
+                        <input type='password' required onChange={(e) => setPasswordConfirmation(e.target.value)}></input>
+                        <button autoFocus type="submit" className='button-submit'>CADASTRAR</button>
                     </form>
                     <div className='login'>
                         <p className='textLogin'>Já possui conta? </p>
