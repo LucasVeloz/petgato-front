@@ -11,9 +11,9 @@ const ForgetScreen = (setEmail, handleSubmit) => {
                     <img src={Logo} alt="PetGato"></img>
                     <form>
                         <p>Email</p>
-                        <input type='email' onChange={(e) => setEmail(e.target.value)}></input>
+                        <input type='email' autoComplete='email' onChange={(e) => setEmail(e.target.value)}></input>
                         <p className='forgetp'>Insira seu email para recuperar a senha</p>
-                        <button type="button" className='button-submit forget' onClick={handleSubmit}>RECUPERAR SENHA</button>
+                        <button type="button" autoFocus className='button-submit forget' onClick={handleSubmit}>RECUPERAR SENHA</button>
                     </form>
                     <div className='login forget'>
                         <p className='textLogin'>Lembrou a senha? </p>

@@ -11,10 +11,10 @@ const Login = (setEmail, handleSubmit) => {
                     <img src={Logo} alt="PetGato"></img>
                     <form>
                         <p>Email</p>
-                        <input type='email' onChange={(e) => setEmail(e.target.value)}></input>
+                        <input type='email' autoComplete='email' onChange={(e) => setEmail(e.target.value)}></input>
                         <p>Senha</p>
                         <input type='password'></input>
-                        <button type="button" className='button-submit' onClick={handleSubmit}>ENTRAR</button>
+                        <button type="button"  autoFocus className='button-submit' onClick={handleSubmit}>ENTRAR</button>
                     </form>
                     <Link to='/forget' className='Link forget'>Esqueci minha senha</Link>
                     <div className='login'>
