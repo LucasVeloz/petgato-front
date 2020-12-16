@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import "./styles.css";
-import { Link } from "react-router-dom";
-import Logo from "../../assets/gatinho_petgato.svg";
-=======
->>>>>>> 2bd00a07485f1b5ed9dd175825615cf51d6bca5a
 import { useCallback, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 
@@ -11,7 +5,7 @@ import api from "../../services/api";
 
 import Logo from "../../assets/gatinho_petgato.svg";
 
-import "./style.css";
+import "./styles.css";
 
 const ResetPassword = () => {
     const [email, setEmail] = useState("");
@@ -41,15 +35,8 @@ const ResetPassword = () => {
         <div className="container-max forgetScreen">
             <div className="half screen">
                 <div className="centralizer">
-<<<<<<< HEAD
-                    <Link to='/' className='linklogo'>
-                        <img src={Logo} alt="PetGato"></img>
-                    </Link>
-                    <form>
-=======
                     <img src={Logo} alt="PetGato"></img>
                     <form onSubmit={handleSubmit}>
->>>>>>> 2bd00a07485f1b5ed9dd175825615cf51d6bca5a
                         <p>Email</p>
                         <input
                             type="email"
