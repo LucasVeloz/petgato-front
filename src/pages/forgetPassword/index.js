@@ -1,25 +1,53 @@
+<<<<<<< HEAD
 import "./styles.css";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/gatinho_petgato.svg";
+=======
+>>>>>>> 2bd00a07485f1b5ed9dd175825615cf51d6bca5a
 import { useCallback, useState } from "react";
+import { Link, useHistory } from "react-router-dom";
+
+import Logo from "../../assets/gatinho_petgato.svg";
+
 import api from "../../services/api";
+
+import "./style.css";
+
 const ForgetPassword = () => {
     const [email, setEmail] = useState("");
 
-    const handleSubmit = useCallback(async () => {
-        await api.post("/password/forgot", {
-            email,
-        });
-    }, [email]);
+    const history = useHistory();
+
+    const handleSubmit = useCallback(async (e) => {
+        e.preventDefault();
+        try {
+            await api.post("/password/forgot", {
+                email,
+            });
+
+            alert("Um e-mail de recuperação de senha foi enviado para o usuário informado.");
+
+            setEmail("");
+
+            history.push('/reset');
+        } catch (e) {
+            alert("Não foi possível enviar o e-mail de recuperação para o usuário informado. Por favor, confira os dados e tente novamente.");
+        }
+    }, [email, history]);
 
     return (
         <div className="container-max forgetScreen">
             <div className="half screen">
                 <div className="centralizer">
+<<<<<<< HEAD
                     <Link to='/' className='linklogo'>
                         <img src={Logo} alt="PetGato"></img>
                     </Link>
                     <form>
+=======
+                    <img src={Logo} alt="PetGato"></img>
+                    <form onSubmit={handleSubmit}>
+>>>>>>> 2bd00a07485f1b5ed9dd175825615cf51d6bca5a
                         <p>Email</p>
                         <input
                             type="email"
@@ -30,10 +58,9 @@ const ForgetPassword = () => {
                             Insira seu email para recuperar a senha
                         </p>
                         <button
-                            type="button"
+                            type="submit"
                             autoFocus
                             className="button-submit forget"
-                            onClick={handleSubmit}
                         >
                             RECUPERAR SENHA
                         </button>

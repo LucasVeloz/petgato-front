@@ -7,21 +7,25 @@ import { useHistory } from 'react-router-dom';
 const LoginPage = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    
     const history = useHistory();
+
     const handleSubmit = useCallback(async (e) => {
         e.preventDefault();
-        try{
 
+        try{
             const { data } = await api.post("/auth/login", {
                 email,
                 password,
             });
-            const token = data.token;
-            localStorage.setItem("@PetGato:token", token);
-            history.replace('/');
-        }catch (e) {
-            alert("Houve um erro, tente novamente mais tarde :)");
 
+            const token = data.token;
+
+            localStorage.setItem("@PetGato:token", token);
+
+            history.replace('/');
+        } catch (e) {
+            alert("Houve um erro, tente novamente mais tarde :)");
         }
     }, [email, password, history]);
     return (
