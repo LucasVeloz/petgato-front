@@ -1,27 +1,42 @@
-import "./style.css";
-import { Link } from "react-router-dom";
-import Logo from "../../assets/gatinho_petgato.svg";
 import { useCallback, useState } from "react";
+import { Link, useHistory } from "react-router-dom";
+
 import api from "../../services/api";
+
+import Logo from "../../assets/gatinho_petgato.svg";
+
+import "./style.css";
+
 const ResetPassword = () => {
     const [email, setEmail] = useState("");
     const [token, setToken] = useState("");
     const [password, setPassword] = useState("");
 
-    const handleSubmit = useCallback(async () => {
-        await api.post("/password/reset", {
-            email,
-            token,
-            password
-        });
-    }, [email, token, password]);
+    const history = useHistory();
+
+    const handleSubmit = useCallback(async (e) => {
+        e.preventDefault();
+        try {
+            await api.post("/password/reset", {
+                email,
+                token,
+                password
+            });
+
+            alert("Senha alterada com sucesso!");
+
+            history.replace('/');
+        } catch (e) {
+            alert("Não foi possível alterar a senha, verifique se o e-mail e o token são válidos");
+        }
+    }, [email, token, password, history]);
 
     return (
         <div className="container-max forgetScreen">
             <div className="half screen">
                 <div className="centralizer">
                     <img src={Logo} alt="PetGato"></img>
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <p>Email</p>
                         <input
                             type="email"
@@ -41,10 +56,9 @@ const ResetPassword = () => {
                             Altere sua senha
                         </p>
                         <button
-                            type="button"
+                            type="submit"
                             autoFocus
                             className="button-submit forget"
-                            onClick={handleSubmit}
                         >
                             ATUALIZAR SENHA
                         </button>

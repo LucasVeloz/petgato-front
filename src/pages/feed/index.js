@@ -5,8 +5,8 @@ const Feed = () => {
 
     return(
         <>
-        <Header/>
-        <Footer/>
+            <Header/>
+            <Footer/>
         </>
     );
 }
