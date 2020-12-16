@@ -34,7 +34,7 @@ const ForgetPassword = () => {
                 <div className="centralizer">
                     <Link to='/' className='linklogo'>
                         <img src={Logo} alt="PetGato"></img>
-                    </Link>
+                    <
                     <form onSubmit={handleSubmit}>
                         <p>Email</p>
                         <input
