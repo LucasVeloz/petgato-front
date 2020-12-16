@@ -1,4 +1,4 @@
-import './style.css';
+import './styles.css';
 import { useCallback, useState } from "react";
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/gatinho_petgato.svg'
@@ -28,7 +28,9 @@ const LoginPage = () => {
         <div className='container-max login'>
             <div className='half screen'>
                 <div className='centralizer'>
-                    <img src={Logo} alt="PetGato"></img>
+                    <Link to='/' className='linklogo'>
+                        <img src={Logo} alt="PetGato"></img>
+                    </Link>
                     <form onSubmit={handleSubmit}>
                         <p>Email</p>
                         <input type='email' autoComplete='email' onChange={(e) => setEmail(e.target.value)}></input>

@@ -34,10 +34,20 @@
     text-decoration: none;
     cursor: pointer;
 }
-
+.header ul li .Link:hover {
+    font-weight: bold;
+}
+.header ul li .Link:active {
+    font-weight: bold;
+}
 @media ( max-width: 2080px) {
     .header ul {
         width: 40%;
+    }
+}
+@media ( max-width: 1600px) {
+    .header ul {
+        width: 55%;
     }
 }
 @media ( max-width: 1350px) {

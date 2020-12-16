@@ -3,7 +3,7 @@ import api from '../../services/api';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/gatinho_petgato.svg';
 import { useHistory } from 'react-router-dom';
-import './style.css';
+import './styles.css';
 
 const Cadastro = () => {
     const [name, setName] = useState('');
@@ -35,7 +35,9 @@ const Cadastro = () => {
         <div className='container-max'>
             <div className='half screen'>
                 <div className='centralizer'>
-                    <img src={logo} alt="PetGato"></img>
+                    <Link to='/' className='linklogo'>
+                        <img src={logo} alt="PetGato"></img>
+                    </Link>
                     <form onSubmit={handleSubmit}>
                         <p>Nome</p>
                         <input autoComplete="name" required onChange={(e) => setName(e.target.value)}></input>

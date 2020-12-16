@@ -1,4 +1,4 @@
-import "./style.css";
+import "./styles.css";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/gatinho_petgato.svg";
 import { useCallback, useState } from "react";
@@ -20,7 +20,9 @@ const ResetPassword = () => {
         <div className="container-max forgetScreen">
             <div className="half screen">
                 <div className="centralizer">
-                    <img src={Logo} alt="PetGato"></img>
+                    <Link to='/' className='linklogo'>
+                        <img src={Logo} alt="PetGato"></img>
+                    </Link>
                     <form>
                         <p>Email</p>
                         <input
