@@ -23,7 +23,7 @@ const ForgetPassword = () => {
 
             setEmail("");
 
-            history.push('/password/reset');
+            history.push('/reset');
         } catch (e) {
             alert("Não foi possível enviar o e-mail de recuperação para o usuário informado. Por favor, confira os dados e tente novamente.");
         }
