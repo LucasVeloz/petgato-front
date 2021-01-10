@@ -38,7 +38,7 @@
 .header ul li .Link:hover {
     font-weight: bold;
 }
-.header ul li .Link:active {
+.activeLink {
     font-weight: bold;
 }
 @media ( max-width: 2080px) {
