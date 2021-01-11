@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Headerdiv = styled.div`
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap');
     display: flex;
     height: 150px;
     width: 100%;

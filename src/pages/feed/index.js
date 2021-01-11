@@ -1,7 +1,7 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 // import "./styles.css";
-import { Page } from './styles';
+import { Page, Tags } from './styles';
 import { Link } from "react-router-dom";
 import img from "../../assets/image1.jpg";
 import img2 from "../../assets/image2.jpg";
@@ -12,6 +12,8 @@ import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
 import { faInstagramSquare } from '@fortawesome/free-brands-svg-icons';
 import { faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
 import { AiOutlineHeart } from 'react-icons/ai';
+import { MdChatBubbleOutline } from 'react-icons/md';
+import { AiOutlineEye } from 'react-icons/ai';
 
 const Feed = () => {
     return (
@@ -50,7 +52,7 @@ const Feed = () => {
                 <div className="posts">
                     <h2>Miau!</h2>
                     <p>
-                        Seja Bem-vinda(o) ao blog PetGatô! Confiranosso conteúdo
+                        Seja Bem-vinda(o) ao blog PetGatô! Confira nosso conteúdo
                         mais recente:
                     </p>
                     <ul>
@@ -58,6 +60,12 @@ const Feed = () => {
                             <div className="publica">
                                 <img src={img} alt="foto do post"></img>
                                 <div className="colContainer">
+                                    <Tags>
+                                        <h4>Tags:</h4>
+                                        <p className='tag'>Cuidados</p>
+                                        <p className='tag'>Cães & Gatos</p>
+                                        <p className='tag'>Guias</p>
+                                    </Tags>
                                     <h1>
                                         Morbi in sem quis dui placerat ornare.
                                         Pellentesque odio nisi
@@ -72,54 +80,9 @@ const Feed = () => {
                                         <Link to="/" className="buttonleia">
                                             LEIA MAIS
                                         </Link>
-                                        <AiOutlineHeart className='heart' size='1.75em' />
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="publica">
-                                <img src={img2} alt="foto do post"></img>
-                                <div className="colContainer">
-                                    <h1>
-                                        Morbi in sem quis dui placerat ornare.
-                                        Pellentesque odio nisi
-                                    </h1>
-                                    <p>
-                                        Morbi in sem quis dui placerat ornare.
-                                        Pellentesque odio nisi, euismod in,
-                                        pharetra a, ultricies in, diam. Sed
-                                        arcu. Cras consequat.
-                                    </p>
-                                    <div className='row'>
-                                        <Link to="/" className="buttonleia">
-                                            LEIA MAIS
-                                        </Link>
-                                        <AiOutlineHeart className='heart' size='1.75em' />
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="publica">
-                                <img src={img} alt="foto do post"></img>
-
-                                <div className="colContainer">
-                                    <h1>
-                                        Morbi in sem quis dui placerat ornare.
-                                        Pellentesque odio nisi
-                                    </h1>
-                                    <p>
-                                        Morbi in sem quis dui placerat ornare.
-                                        Pellentesque odio nisi, euismod in,
-                                        pharetra a, ultricies in, diam. Sed
-                                        arcu. Cras consequat.
-                                    </p>
-                                    <div className='row'>
-                                        <Link to="/" className="buttonleia">
-                                            LEIA MAIS
-                                        </Link>
-                                        <AiOutlineHeart className='heart' size='1.75em' />
+                                        <AiOutlineHeart className='heart' size='2em' />
+                                        <MdChatBubbleOutline size='2em' color='#707070'/>
+                                        <AiOutlineEye size='2em' color='#707070' />
                                     </div>
                                 </div>
                             </div>

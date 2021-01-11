@@ -184,14 +184,15 @@ export const Page = styled.div`
         color: #707070;
     }
     .row {
-        width: 40%;
+        width: 30%;
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
     .buttonleia {
         display: flex;
-        width: 125px;
-        height: 35px;
+        width: 150px;
+        height: 50px;
         justify-content: center;
         align-items: center;
         color: #707070;
@@ -223,6 +224,21 @@ export const Page = styled.div`
         margin-bottom: 50px;
     }
     .buttonPreview:hover {
+        background-color: #FBE9F6;
+    }
+`;
+
+export const Tags = styled.div`
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    h4 {
+        font-weight: 400;
+        color: #707070;
+        margin-right: 5px;
+    }
+    .tag {
+        color: #BA66A3;
+        width: auto;
         background-color: #FBE9F6;
     }
 `;
