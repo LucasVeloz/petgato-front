@@ -9,16 +9,16 @@ export const Page = styled.div`
 
 
     .container {
+        height: auto;
         width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         font-family: 'Montserrat', sans-serif;
-        padding-top: 30px;
+        margin-top: 30px;
     }
     .geral {
         width: 20%;
-        height: auto; 
         margin: 20px;
         border-right-style: solid;
         border-color: rgba(200, 200, 200, 1);
@@ -231,6 +231,8 @@ export const Page = styled.div`
 export const Tags = styled.div`
     display: flex;
     font-family: 'Montserrat', sans-serif;
+    width: 70%;
+    height: auto;
     h4 {
         font-weight: 400;
         color: #707070;
