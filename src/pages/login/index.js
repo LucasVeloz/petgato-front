@@ -1,4 +1,4 @@
-import './styles.css';
+import { ContainerMaxLogin } from './styles'
 import { useCallback, useState } from "react";
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/gatinho_petgato.svg'
@@ -29,7 +29,7 @@ const LoginPage = () => {
         }
     }, [email, password, history]);
     return (
-        <div className='container-max login'>
+        <ContainerMaxLogin>
             <div className='half screen'>
                 <div className='centralizer'>
                     <Link to='/' className='linklogo'>
@@ -49,7 +49,7 @@ const LoginPage = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </ContainerMaxLogin>
     );
 };
 

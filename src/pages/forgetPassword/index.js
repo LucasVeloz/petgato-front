@@ -1,5 +1,5 @@
 
-import "./styles.css";
+import { ContainerMaxForget } from './styles';
 import Logo from "../../assets/gatinho_petgato.svg";
 import { useCallback, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
@@ -29,7 +29,7 @@ const ForgetPassword = () => {
     }, [email, history]);
 
     return (
-        <div className="container-max forgetScreen">
+        <ContainerMaxForget>
             <div className="half screen">
                 <div className="centralizer">
                     <Link to='/' className='linklogo'>
@@ -68,7 +68,7 @@ const ForgetPassword = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </ContainerMaxForget>
     );
 };
 

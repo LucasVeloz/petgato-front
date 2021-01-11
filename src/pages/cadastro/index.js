@@ -3,7 +3,8 @@ import api from '../../services/api';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/gatinho_petgato.svg';
 import { useHistory } from 'react-router-dom';
-import './styles.css';
+// import './styles.css';
+import { ContainerMax } from './styles';
 
 const Cadastro = () => {
     const [name, setName] = useState('');
@@ -32,7 +33,7 @@ const Cadastro = () => {
     }, [name, email, password, passwordConfirmation, history]);
 
     return (
-        <div className='container-max'>
+        <ContainerMax>
             <div className='half screen'>
                 <div className='centralizer'>
                     <Link to='/' className='linklogo'>
@@ -55,7 +56,7 @@ const Cadastro = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </ContainerMax>
     );
 }
 export default Cadastro;

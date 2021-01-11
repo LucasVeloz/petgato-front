@@ -4,8 +4,7 @@ import { Link, useHistory } from "react-router-dom";
 import api from "../../services/api";
 
 import Logo from "../../assets/gatinho_petgato.svg";
-
-import "./styles.css";
+import {ContainerMaxReset} from './styles';
 
 const ResetPassword = () => {
     const [email, setEmail] = useState("");
@@ -32,7 +31,7 @@ const ResetPassword = () => {
     }, [email, token, password, history]);
 
     return (
-        <div className="container-max forgetScreen">
+        <ContainerMaxReset>
             <div className="half screen">
                 <div className="centralizer">
                     <img src={Logo} alt="PetGato"></img>
@@ -78,7 +77,7 @@ const ResetPassword = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </ContainerMaxReset>
     );
 };
 

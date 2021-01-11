@@ -1,13 +1,21 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import "./styles.css";
+// import "./styles.css";
+import { Page } from './styles';
 import { Link } from "react-router-dom";
 import img from "../../assets/image1.jpg";
 import img2 from "../../assets/image2.jpg";
 import Foto from "../../assets/mulhercomdog.jpg";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
+import { faInstagramSquare } from '@fortawesome/free-brands-svg-icons';
+import { faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
+import { AiOutlineHeart } from 'react-icons/ai';
+
 const Feed = () => {
     return (
-        <div className="page">
+        <Page>
             <Header />
             <div className="container">
                 <div className="geral">
@@ -24,6 +32,11 @@ const Feed = () => {
                                 ou com meu pets, estou aqui escrevendo conteúdo
                                 para vocês. Espero que você goste;
                             </span>
+                            <div className='icons'>
+                                <FontAwesomeIcon icon={faFacebookSquare} className='icon' size='2x' />
+                                <FontAwesomeIcon icon={faInstagramSquare} className='icon' size='2x' />
+                                <FontAwesomeIcon icon={faTwitterSquare} className='icon' size='2x' />
+                            </div>
                         </div>
                     </div>
                     <p className="p3">Publicações mais populares:</p>
@@ -32,9 +45,7 @@ const Feed = () => {
                         <div></div>
                     </div>
                     <div className="ultimopost"></div>
-                    <button className="final">
-                        <Link to=""></Link>Ver Todas
-                    </button>
+                    <Link to="/" className='final'>VER TODAS</Link>
                 </div>
                 <div className="posts">
                     <h2>Miau!</h2>
@@ -57,9 +68,12 @@ const Feed = () => {
                                         pharetra a, ultricies in, diam. Sed
                                         arcu. Cras consequat.
                                     </p>
-                                    <Link to="/" className="buttonleia">
-                                        LEIA MAIS
-                                    </Link>
+                                    <div className='row'>
+                                        <Link to="/" className="buttonleia">
+                                            LEIA MAIS
+                                        </Link>
+                                        <AiOutlineHeart className='heart' size='1.75em' />
+                                    </div>
                                 </div>
                             </div>
                         </li>
@@ -77,9 +91,12 @@ const Feed = () => {
                                         pharetra a, ultricies in, diam. Sed
                                         arcu. Cras consequat.
                                     </p>
-                                    <Link to="/" className="buttonleia">
-                                        LEIA MAIS
-                                    </Link>
+                                    <div className='row'>
+                                        <Link to="/" className="buttonleia">
+                                            LEIA MAIS
+                                        </Link>
+                                        <AiOutlineHeart className='heart' size='1.75em' />
+                                    </div>
                                 </div>
                             </div>
                         </li>
@@ -98,17 +115,23 @@ const Feed = () => {
                                         pharetra a, ultricies in, diam. Sed
                                         arcu. Cras consequat.
                                     </p>
-                                    <Link to="/" className="buttonleia">
-                                        LEIA MAIS
-                                    </Link>
+                                    <div className='row'>
+                                        <Link to="/" className="buttonleia">
+                                            LEIA MAIS
+                                        </Link>
+                                        <AiOutlineHeart className='heart' size='1.75em' />
+                                    </div>
                                 </div>
                             </div>
                         </li>
                     </ul>
+                    <Link to='/' className='buttonPreview'>
+                        PUBLICAÇÕES ANTERIORES
+                    </Link>
                 </div>
             </div>
             <Footer />
-        </div>
+        </Page>
     );
 };
 

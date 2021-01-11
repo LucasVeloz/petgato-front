@@ -1,11 +1,11 @@
-import './styles.css';
+// import './styles.css';
 import Logo from '../../assets/gatinho_petgato_branco.svg';
 import { NavLink } from 'react-router-dom';
-
+import { Headerdiv } from './styles';
 const Header = () => {
 
     return (
-        <div className='header'>
+        <Headerdiv>
             
             <img src={Logo} alt='logo'></img>
             <ul>
@@ -30,7 +30,7 @@ const Header = () => {
                     </NavLink>
                 </li>
             </ul>
-        </div>
+        </Headerdiv>
     );
 }
 
