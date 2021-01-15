@@ -1,36 +1,36 @@
-import './style.css'
+// import './styles.css';
 import Logo from '../../assets/gatinho_petgato_branco.svg';
-import { Link } from 'react-router-dom';
-
+import { NavLink } from 'react-router-dom';
+import { Headerdiv } from './styles';
 const Header = () => {
 
     return (
-        <div className='header'>
+        <Headerdiv>
             
             <img src={Logo} alt='logo'></img>
             <ul>
                 <li>
-                    <Link to='/' className='Link'>
+                    <NavLink exact to='/' className='Link' activeClassName='activeLink'>
                         Página Inicial
-                    </Link>
+                    </NavLink>
                 </li>
                 <li>
-                    <Link to='/' className='Link'> 
+                    <NavLink exact to='/about' className='Link' activeClassName='activeLink'> 
                         Sobre Nós
-                    </Link>
+                    </NavLink>
                 </li>
                 <li>
-                    <Link to='/' className='Link'>
+                    <NavLink exact to='/contact' className='Link' activeClassName='activeLink'>
                         Fale Conosco
-                    </Link>
+                    </NavLink>
                 </li>
                 <li>
-                    <Link to='/' className='Link'>
+                    <NavLink exact to='/login' className='Link' activeClassName='activeLink'>
                         Entrar
-                    </Link>
+                    </NavLink>
                 </li>
             </ul>
-        </div>
+        </Headerdiv>
     );
 }
 

@@ -1,40 +1,40 @@
-
-import { ContainerMaxForget } from './styles';
-import Logo from "../../assets/gatinho_petgato.svg";
 import { useCallback, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 
 import api from "../../services/api";
 
-const ForgetPassword = () => {
+import Logo from "../../assets/gatinho_petgato.svg";
+import {ContainerMaxReset} from './styles';
+
+const ResetPassword = () => {
     const [email, setEmail] = useState("");
+    const [token, setToken] = useState("");
+    const [password, setPassword] = useState("");
 
     const history = useHistory();
 
     const handleSubmit = useCallback(async (e) => {
         e.preventDefault();
         try {
-            await api.post("/password/forgot", {
+            await api.post("/password/reset", {
                 email,
+                token,
+                password
             });
 
-            alert("Um e-mail de recuperação de senha foi enviado para o usuário informado.");
+            alert("Senha alterada com sucesso!");
 
-            setEmail("");
-
-            history.push('/reset');
+            history.replace('/');
         } catch (e) {
-            alert("Não foi possível enviar o e-mail de recuperação para o usuário informado. Por favor, confira os dados e tente novamente.");
+            alert("Não foi possível alterar a senha, verifique se o e-mail e o token são válidos");
         }
-    }, [email, history]);
+    }, [email, token, password, history]);
 
     return (
-        <ContainerMaxForget>
+        <ContainerMaxReset>
             <div className="half screen">
                 <div className="centralizer">
-                    <Link to='/' className='linklogo'>
-                        <img src={Logo} alt="PetGato"></img>
-                    </Link>
+                    <img src={Logo} alt="PetGato"></img>
                     <form onSubmit={handleSubmit}>
                         <p>Email</p>
                         <input
@@ -42,15 +42,24 @@ const ForgetPassword = () => {
                             autoComplete="email"
                             onChange={(e) => setEmail(e.target.value)}
                         ></input>
+                        <p>Token</p>
+                        <input
+                            onChange={(e) => setToken(e.target.value)}
+                        ></input>
+                        <p>Nova senha</p>
+                        <input
+                            type="password"
+                            onChange={(e) => setPassword(e.target.value)}
+                        ></input>
                         <p className="forgetp">
-                            Insira seu email para recuperar a senha
+                            Altere sua senha
                         </p>
                         <button
                             type="submit"
                             autoFocus
                             className="button-submit forget"
                         >
-                            RECUPERAR SENHA
+                            ATUALIZAR SENHA
                         </button>
                     </form>
                     <div className="login forget">
@@ -68,8 +77,8 @@ const ForgetPassword = () => {
                     </div>
                 </div>
             </div>
-        </ContainerMaxForget>
+        </ContainerMaxReset>
     );
 };
 
-export default ForgetPassword;
+export default ResetPassword;
