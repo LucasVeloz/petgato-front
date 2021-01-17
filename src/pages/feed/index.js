@@ -4,7 +4,6 @@ import Footer from "../../components/Footer";
 import { Page, Tags } from './styles';
 import { Link } from "react-router-dom";
 import img from "../../assets/image1.jpg";
-import img2 from "../../assets/image2.jpg";
 import Foto from "../../assets/mulhercomdog.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
