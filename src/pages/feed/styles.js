@@ -13,13 +13,13 @@ export const Page = styled.div`
         width: 100%;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
         font-family: 'Montserrat', sans-serif;
         margin-top: 30px;
     }
     .geral {
-        width: 20%;
-        margin: 20px;
+        max-width: 20%;
+        padding: 20px;
         border-right-style: solid;
         border-color: rgba(200, 200, 200, 1);
         border-width: 0.1px;
@@ -133,7 +133,7 @@ export const Page = styled.div`
         width: 20%;
     }
     .posts {
-        width: auto;
+        max-width: 70%;
     }
     .posts h2 {
         width: auto;
@@ -174,17 +174,17 @@ export const Page = styled.div`
         width: auto;
     }
     .colContainer h1 {
-        width: 80%;
-        margin-left: 0px;
         color: #BA66A3;
+        margin-bottom: 20px;
     }
     .colContainer p {
-        width: 80%;
         margin-left: 0px;
         color: #707070;
+        font-weight: 300;
+        font-size: 20px;
     }
     .row {
-        width: 30%;
+        width: 400px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -204,11 +204,11 @@ export const Page = styled.div`
         background-color: #FBE9F6;
     }
     .heart {
-        color: #707070;
+        fill: #707070;
         cursor: pointer;
     }
     .heart:active {
-        background-color: #C882B4;
+        fill: #C882B4;
     }
     .buttonPreview {
         display: flex;
@@ -226,6 +226,9 @@ export const Page = styled.div`
     .buttonPreview:hover {
         background-color: #FBE9F6;
     }
+    span {
+        color: #707070;
+    }
 `;
 
 export const Tags = styled.div`
@@ -236,11 +239,14 @@ export const Tags = styled.div`
     h4 {
         font-weight: 400;
         color: #707070;
-        margin-right: 5px;
+        margin-right: 10px;
+        font-style: italic;
     }
     .tag {
         color: #BA66A3;
         width: auto;
         background-color: #FBE9F6;
+        margin-right: 10px;
+        padding: 2px;
     }
 `;

@@ -3,6 +3,7 @@ import forget from '../../assets/forgetimage.jpg';
 import { ContainerMax } from '../cadastro/styles';
 
 export const ContainerMaxForget = styled(ContainerMax)`
+    height: 100vh;
     background-image: url(${forget});
 
     .button-submit.forget {

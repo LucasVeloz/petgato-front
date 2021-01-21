@@ -61,9 +61,9 @@ const Feed = () => {
                                 <div className="colContainer">
                                     <Tags>
                                         <h4>Tags:</h4>
-                                        <p className='tag'>Cuidados</p>
-                                        <p className='tag'>Cães & Gatos</p>
-                                        <p className='tag'>Guias</p>
+                                        <span className='tag'>Cuidados</span>
+                                        <span className='tag'>Cães & Gatos</span>
+                                        <span className='tag'>Guias</span>
                                     </Tags>
                                     <h1>
                                         Morbi in sem quis dui placerat ornare.
@@ -80,8 +80,11 @@ const Feed = () => {
                                             LEIA MAIS
                                         </Link>
                                         <AiOutlineHeart className='heart' size='2em' />
+                                        <span>36</span>
                                         <MdChatBubbleOutline size='2em' color='#707070'/>
+                                        <span>4</span>
                                         <AiOutlineEye size='2em' color='#707070' />
+                                        <span>88</span>
                                     </div>
                                 </div>
                             </div>
