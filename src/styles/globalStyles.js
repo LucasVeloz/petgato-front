@@ -16,5 +16,13 @@ export const GlobalStyle = createGlobalStyle`
         
     }
 
+    :root {
+        --dark-gray: #444143;
+        --gray: #707070;
+        --pink: #FBE9F6;
+        --dark-pink: #BA66A3;
+        --middle-pink: #C882B4;
+
+    }
 
 `;
