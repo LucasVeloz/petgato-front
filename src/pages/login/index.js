@@ -20,8 +20,12 @@ const LoginPage = () => {
             });
 
             const token = data.token;
+            const userId = data.id;
+            const userEmail = data.email;
 
             localStorage.setItem("@PetGato:token", token);
+            localStorage.setItem("@PetGato:id", userId);
+            localStorage.setItem("@PetGato:email", userEmail);
 
             history.replace('/');
         } catch (e) {
