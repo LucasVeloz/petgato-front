@@ -12,7 +12,7 @@ export const Headerdiv = styled.div`
 
     img {
         margin-left: 50px;
-        width: 120px;
+        width: 100px;
     }
     ul {
         display: flex;
@@ -29,13 +29,13 @@ export const Headerdiv = styled.div`
         color: white;
         text-decoration: none;
         cursor: pointer;
-        font-weight: 400;
+        font-weight: 300;
     }
     .Link:hover {
-        font-weight: 500;
+        font-weight: bold;
     }
     .activeLink {
-        font-weight: 500;
+        font-weight: bold;
     }
     @media (max-width: 2080px) {
         ul {

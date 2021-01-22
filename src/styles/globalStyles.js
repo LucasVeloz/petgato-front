@@ -13,7 +13,8 @@ export const GlobalStyle = createGlobalStyle`
     html, body, #root {
         max-width: 100vw;
         max-height: 100vh;
-        
+        width: 100%;
+        height: 100%;
     }
 
     :root {

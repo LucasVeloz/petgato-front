@@ -3,7 +3,6 @@ import login from '../../assets/Login.jpg';
 import { ContainerMax } from '../cadastro/styles';
 
 export const ContainerMaxLogin = styled(ContainerMax)`
-    height: 100vh;
     background-image: url(${login});
 
     .Link.forget {

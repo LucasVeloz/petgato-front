@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    height: 100vh;
+    height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -27,9 +27,15 @@ export const ContainerLeft = styled.div`
 `;
 
 export const MiniLink = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: var(--dark-pink);
 
+    
     span {
-        color: var(--dark-pink);
+        margin-left: 15px;
         font-weight: 600;
     }
 
@@ -64,13 +70,28 @@ export const ContainerRight = styled.div`
         width: 300px;
         margin-right: 30px;
         border: 1.5px solid var(--middle-pink);
+        padding-left: 10px;
         :nth-of-type(5) {
             margin-right: 300px;
+        }
+        ::placeholder {
+            color: var(--middle-pink);
+            font-weight: 100;
+        }
+        :focus {
+            outline-color: var(--middle-pink);
         }
     }
 
     button {
         height: 50px;
         width: 150px;
+        border: 1px solid var(--middle-pink);
+        color: var(--gray);
+        font-size: 20px;
+        :focus {
+            outline-color: var(--middle-pink);
+            background-color: var(--pink);
+        }
     }
 `;

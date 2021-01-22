@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import cadastro from '../../assets/Cadastro.jpg'
 export const ContainerMax = styled.div`
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     background-image: url(${cadastro});
     background-position: center;
